@@ -65,7 +65,6 @@ func leftRotate[V constraints.Ordered](n *node[V]) {
 	n.left.left = buf
 
 	balance(n.left)
-	balance(n)
 }
 
 // rightRotate - internal function for right rotating in tree
@@ -82,7 +81,6 @@ func rightRotate[V constraints.Ordered](n *node[V]) {
 	n.right.right = buf
 
 	balance(n.right)
-	balance(n)
 }
 
 // balanceFactor - internal function for getting balance factor
